@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import EditImage from '../../assets/editar.png';
+import DeleteImage from '../../assets/deletar.png';
 
 export const Data = styled.div`
   display: grid;
@@ -45,14 +47,26 @@ export const LogoEditAndDelete = styled.div`
   width: 100%;
 `;
 
-export const LogoEdit = styled.img`
+export const LogoEdit = styled.button`
   cursor: pointer;
   width: 25px;
   height: 25px;
+  border: 0;
+  background-size: 100%;
+  background-image: url(${EditImage});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
 `;
 
-export const LogoDelete = styled.img`
+export const LogoDelete = styled.button`
   cursor: pointer;
   width: 25px;
   height: 25px;
+  border: 0;
+  background-size: 100%;
+  background-image: url(${DeleteImage});
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: inherit;
 `;

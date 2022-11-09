@@ -19,7 +19,7 @@ export const api = {
     return response.data
   },
   deleteTheProduct: async (id: number) => {
-    let response = await axiosInstance.delete('/delete', {data: { id }})
+    let response = await axiosInstance.delete(`/delete/${id}`, {data: { id }})
     return response.data
   }
 };

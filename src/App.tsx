@@ -1,9 +1,9 @@
 import * as C from './App-styles';
-import LupaImage from './assets/lupa.png';
 import { useEffect, useState } from 'react';
 import { Product } from './types/product';
 import { api } from './api';
 import { ProductItem } from './components/ProductItem';
+import { ResearchField } from './components/ResearchField';
 
 const App = () => {
 
@@ -20,15 +20,12 @@ const App = () => {
     setLoading(false);
     setProducts(json.products);
   }
-  
+
   return (
     <C.Container>
       <C.UpSide>
         <C.StockName>Produtos</C.StockName>
-        <C.researchField>
-          <C.Logo src={LupaImage} />
-          <C.InputSearch placeholder='Busque pelo Produto' />
-        </C.researchField>
+          <ResearchField />
       </C.UpSide>
       {loading &&
         <C.Loading>Carregando...</C.Loading>
@@ -44,7 +41,7 @@ const App = () => {
             <C.Value>Descrição</C.Value>
           </C.InfoValue>
         </C.Info>
-        {products.map((item) => (
+        {products.map((item, index) => (
           <ProductItem data={item} />
         ))}
       </C.MiddlePart>
