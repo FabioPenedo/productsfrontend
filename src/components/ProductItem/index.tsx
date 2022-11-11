@@ -9,7 +9,7 @@ type Props = {
   data: Product
 }
 
-const handleClickEdit = () => {
+const handleClickEdit = async (id: number) => {
   
 }
 
@@ -31,7 +31,7 @@ export const ProductItem = ({data}: Props) => {
           <C.Name>{data.description}</C.Name>
         </C.DataName>
         <C.LogoEditAndDelete>
-          <C.LogoEdit onClick={handleClickEdit} />
+          <C.LogoEdit onClick={() => handleClickEdit(data.id)} />
           <C.LogoDelete onClick={() => handleClickDelete(data.id)} />
         </C.LogoEditAndDelete>
       </C.InfoData>
