@@ -1,11 +1,31 @@
 import styled from "styled-components";
 import EditImage from './assets/editar.png'
+import NewImage from './assets/mais.png';
 
 export const Container = styled.div`
   width: 100%;
   min-height: 100vh;
   background-color: white;
 `;
+
+export const Button = styled.button`
+  z-index: 999;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  margin: 7px 7px;
+  padding: 15px 15px;
+  cursor: pointer;
+  background-color: rgba(53, 70, 215, 0.7);
+  color: #FFF;
+  border: 0;
+  border-radius: 5px;
+  transition: all .5s ease;
+
+    &:hover {
+      background-color: rgba(53, 70, 215)
+    }
+`
 
 export const UpSide = styled.div`
   width: auto;

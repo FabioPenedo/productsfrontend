@@ -1,9 +1,9 @@
-import * as C from '../App-styles';
+import * as C from './style';
 import { useEffect, useState } from 'react';
-import { Product } from '../types/product';
-import { api } from '../api';
-import { ProductItem } from '../components/ProductItem';
-import { ResearchField } from '../components/ResearchField';
+import { Product } from '../../types/product';
+import { api } from '../../api';
+import { ProductItem } from '../../components/ProductItem';
+import { ResearchField } from '../../components/ResearchField';
 
 export const Home = () => {
 
@@ -14,6 +14,7 @@ export const Home = () => {
     listProducts()
   }, []);
 
+
   const listProducts = async () => {
     setLoading(true)
     let json = await api.getAllProducts();
@@ -22,7 +23,8 @@ export const Home = () => {
   }
 
   return (
-    <>
+    <C.Container>
+      <C.Button>Adicionar Produto</C.Button>
       <C.UpSide>
         <C.StockName>Produtos</C.StockName>
           <ResearchField />
@@ -47,6 +49,6 @@ export const Home = () => {
         ))}
       </C.MiddlePart>
       }
-    </>
+    </C.Container>
   )
 }
