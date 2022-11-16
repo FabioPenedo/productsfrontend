@@ -4,6 +4,7 @@ import { Product } from '../../types/product';
 import { api } from '../../api';
 import { ProductItem } from '../../components/ProductItem';
 import { ResearchField } from '../../components/ResearchField';
+import { Link } from 'react-router-dom';
 
 export const Home = () => {
 
@@ -24,7 +25,7 @@ export const Home = () => {
 
   return (
     <C.Container>
-      <C.Button>Adicionar Produto</C.Button>
+      <Link to="/register"><C.Button>Adicionar Produto</C.Button></Link>
       <C.UpSide>
         <C.StockName>Produtos</C.StockName>
           <ResearchField />
@@ -45,7 +46,7 @@ export const Home = () => {
           </C.InfoValue>
         </C.Info>
         {products.map((item, index) => (
-          <ProductItem data={item} />
+          <ProductItem key={index} data={item} />
         ))}
       </C.MiddlePart>
       }

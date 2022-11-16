@@ -44,7 +44,7 @@ export const InfoValue = styled.div`
   height: inherit;
 `;
 
-export const Form = styled.form`
+export const Form = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -62,9 +62,10 @@ export const Input = styled.input`
   color: rgba(0, 0, 0, 0.5);
   border: 0;
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  outline: 0;
 `;
 
-export const InputSubmit = styled.input`
+export const InputSubmit = styled.button`
   cursor: pointer;
   width: 250px;
   height: 60px;
