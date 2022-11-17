@@ -20,8 +20,11 @@ export const Register = () => {
   const handleAddProducts = async () => {
     if(product && price && inventory && description) {
       let json = await api.addNewProduct(product, price, inventory, description)
-      console.log(json)
-      //console.log(product, parseFloat(price), parseInt(inventory), description)
+      setProduct('')
+      setPrice('')
+      setInventory('')
+      setDescription('')
+      alert('Registrado com sucesso!')
     } else {
       alert('Precisa ser preenchido!')
     }
@@ -39,7 +42,7 @@ export const Register = () => {
               <C.Input value={price} onChange={handleProduct.price} type="number" placeholder='Preço' />
               <C.Input value={inventory} onChange={handleProduct.inventory} type="number" placeholder='Invetário' />
               <C.Input value={description} onChange={handleProduct.description}  type="text" placeholder='Descrição' />
-              <C.InputSubmit onClick={handleAddProducts}>Registrar</C.InputSubmit> 
+              <C.InputSubmit onClick={handleAddProducts}>Registrar</C.InputSubmit>
             </C.Form>
           </C.InfoValue>
         </C.Info>

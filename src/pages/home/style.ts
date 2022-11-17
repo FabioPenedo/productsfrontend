@@ -1,6 +1,4 @@
 import styled from "styled-components";
-import EditImage from './assets/editar.png'
-import NewImage from './assets/mais.png';
 
 export const Container = styled.div`
   width: 100%;

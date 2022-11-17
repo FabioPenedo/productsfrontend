@@ -12,7 +12,6 @@ const handleClickDelete = async (id: number) => {
   window.location.reload();
 }
 
-
 export const ProductItem = ({data}: Props) => {
   return (
     <C.Data>
