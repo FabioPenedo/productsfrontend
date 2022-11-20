@@ -24,7 +24,7 @@ export const ProductItem = ({data}: Props) => {
           <C.Name>{data.description}</C.Name>
         </C.DataName>
         <C.LogoEditAndDelete>
-          <Link to="/edit"><C.LogoEdit /></Link>
+          <Link to={`/edit/${data.id}`}><C.LogoEdit /></Link>
           <C.LogoDelete onClick={() => handleClickDelete(data.id)} />
         </C.LogoEditAndDelete>
       </C.InfoData>

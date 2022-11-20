@@ -1,9 +1,7 @@
 import axios from 'axios';
-
-//const baseURL = 'http://localhost'
+import { json } from 'react-router-dom';
 
 const axiosInstance = axios.create({baseURL: 'http://localhost'});
-
 
 export const api = {
   addNewProduct: async (name: string, price: string, inventory: string, description: string) => {
@@ -22,9 +20,17 @@ export const api = {
       console.error
     }
   },
-  updateProductData: async (id: number, name: string, price: number, inventory: number, description: string) => {
+  getProductsById: async (id: string | undefined) => {
     try {
-      let response = await axiosInstance.put(`/update/${id}`,  { id, name, price, inventory, description } );
+      let response = await axiosInstance.get(`/list/${id}`)
+      return response.data
+    } catch (error) {
+      console.error
+    }
+  },
+  updateProductData: async (id: string, name: string, price: string, inventory: string, description: string) => {
+    try {
+      let response = await axiosInstance.put(`/uptade/${id}`, new URLSearchParams( { name, price, inventory, description } ));
       return response.data
     } catch (error) {
       console.error

@@ -19,7 +19,7 @@ export const Register = () => {
 
   const handleAddProducts = async () => {
     if(product && price && inventory && description) {
-      let json = await api.addNewProduct(product, price, inventory, description)
+      await api.addNewProduct(product, price, inventory, description)
       setProduct('')
       setPrice('')
       setInventory('')
