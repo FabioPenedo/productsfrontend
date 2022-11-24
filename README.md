@@ -3,6 +3,8 @@
 https://github.com/FabioPenedo/productsbackend
 ```
 
+![pc](https://user-images.githubusercontent.com/82732587/203852430-1dda2f0a-b581-47d9-aae1-e9c44c0a9f91.gif)
+
 ## 🖥️ Projeto
 
 Front end de projeto products, consumindo api criada.
